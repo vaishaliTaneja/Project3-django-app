@@ -1,0 +1,29 @@
+{% extends 'list.html' %}
+{% block content %}
+<section class="content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                <div class="card-header">
+                    <h3 class="card-title">Product Details</h3>
+                </div>
+    <form method = 'POST' enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="card-body">
+            <div class="form-group">
+            {% for field in product %}
+            <div class="form-group">
+                <label>{{field.label}}</label>
+                {{ field }}
+            </div>
+            {% endfor %}
+            </div>
+        <button type="submit" class="btn btn-lg btn-warning">Submit</button>
+    </form>
+</div>
+</div>
+</div>
+{% endblock %}

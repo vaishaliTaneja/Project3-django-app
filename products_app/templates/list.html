@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Ecommerce App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body style="background-color:#4db6ac00;">
+  <div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">Ecommerce Application</h3>
+     </div>
+  </div>
+<nav class="navbar navbar-light" style="background-color:#0011ff;">
+    <a href="#" class="navbar-brand">Products View</a>
+    <a href="{% url 'create-product' %}" class="navbar-brand">Add new Product</a>
+    <a href="#" class="navbar-brand">User details</a>
+</nav>
+<br>
+{% block content %}
+<div class="card-columns">
+    {% for product in shelf %}
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'NAT.jpg' %}">
+  <div class="card-body">
+    <h5 class="card-title">{{ product.productname }}</h5>
+    <p class="card-text">{{ product.productdec }}</p>
+   <div class="card-footer bg-transparent border-dark">
+   <p class="card-title">Price: ${{product.price}}</p>
+   <p class="card-title">Remaining Quantity: {{product.quantity}}</p>
+   <center>
+       <a href="update/{{product.productid}}" class="btn btn-warning card-title" id = '{{product.productid}}'>Update Product Details</a>
+       <a href="delete/{{product.productid}}" class="btn btn-danger card-title" id = '{{product.productid}}'>Remove</a>
+    </center>
+    </div>
+  </div>
+</div>
+    {% endfor %}
+</div>
+{% endblock %}
+</body>
+</html>
