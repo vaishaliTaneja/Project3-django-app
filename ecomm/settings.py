@@ -26,7 +26,7 @@ SECRET_KEY = 'wkli%w1w$rbfk$qmghmdbny4n2c+e&l4&pyzenu65ibf8uu(nq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['54.157.139.68']
 
 
 # Application definition
