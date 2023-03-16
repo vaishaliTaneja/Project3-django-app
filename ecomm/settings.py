@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'ecomm_app', 
         'USER': 'root', 
         'PASSWORD': 'Vaishali*2022', 
-        'HOST': 'project3.crhghuzpojmw.us-east-1.rds.amazonaws.com', 
+        'HOST': 'project-3-django-app.crhghuzpojmw.us-east-1.rds.amazonaws.com', 
         'PORT': '3306'
     } 
 }
