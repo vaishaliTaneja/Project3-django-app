@@ -74,9 +74,9 @@ WSGI_APPLICATION = 'ecomm.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-import pymysql # noqa: 402
-pymysql.version_info = (1, 4, 6, 'final', 0) # change mysqlclient version
-pymysql.install_as_MySQLdb()
+import PyMySQL # noqa: 402
+PyMySQL.version_info = (1, 4, 6, 'final', 0) # change mysqlclient version
+PyMySQL.install_as_MySQLdb()
 
 DATABASES = { 
     'default': { 
